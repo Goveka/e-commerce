@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="store.css">
+    <link rel="icon" type="image/jpeg" href="wolf.jpeg">
+    <title>gadgets</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AX1Z3AJ_r-S_LRoW4sGIqyz0nN18oVtauJ-GpRVgDe3Yq0arMrtQzpuSHyFn7P5XjquRqtJM6NLvaDt-"></script>
+  </head>
+  <body>
+<header class="store">
+  <div class="gadgets">
+    <h1 class="head-text">gadgets</h1>
+    <a href="bookstore.html" class="btn">go to bookstore</a>
+    <a href="mzizi.html" class="btn">go back home</a>
+  </div>
+</header>
+<p class="warning">*NOTE:WHEN YOU MOVE TO THE BOOKSTORE OR REFRESH THE PAGE
+   ALL THE PREVIOUS ACTIVITY WILL BE LOST
+</p>
+
+<main>
+  <section class="amazing">
+    <div class="container">
+      <h2 class="section-title">amazing products</h2>
+      <div class="colomns">
+
+
+        <a  class="amazing-items">
+         <img src="phone1.jpg" class="featuredImg">
+         <p class="featured-details">hello</p>
+         <span id="18">$18</span>
+         <button type="button" class="addbutton">+</button>
+         <button type="button" class="wishlist" >wishlist</button>
+         <button type="button" class="dltbutton" id="products">-</button>
+            </a>
+
+
+        <a  class="amazing-items">
+         <img src="phone2.jpg" class="featuredImg">
+         <p class="featuredDetails" >hello</p>
+         <span  id="18">$18</span>
+         <button type="button" class="addbutton1">+</button>
+         <button type="button" class="wishlist1">wishlist</button>
+         <button type="button" class="dltbutton1" id="products">-</button>
+             </a>
+
+
+        <a class="amazing-items">
+         <img src="phone3.jpg" class="featuredImg">
+         <p class="featured-details">hello</p>
+         <span id="18">$18</span>
+         <button type="button" class="addbutton2" >+</button>
+         <button type="button" class="wishlist2">wishlist</button>
+         <button type="button" class="dltbutton2" id="products">-</button>
+       </a>
+
+
+        <a  class="amazing-items">
+         <img src="phone4.jpg" class="featuredImg">
+         <p class="featured-details">hello</p>
+         <span  id="18">$18</span>
+         <button type="button" class="addbutton3">+</button>
+         <button type="button" class="wishlist3" >wishlist</button>
+         <button type="button" class="dltbutton3"  id="products">-</button>
+       </a>
+
+
+        <a  class="amazing-items">
+         <img src="phone5.jpg" class="featuredImg">
+         <p class="featured-details" >hello</p>
+         <span  id="18">$18</span>
+         <button type="button" class="addbutton4">+</button>
+         <button type="button" class="wishlist4" >wishlist</button>
+         <button type="button" class="dltbutton4" id="products">-</button>
+           </a>
+
+
+        <a  class="amazing-items">
+         <img src="phone6.jpg" class="featuredImg">
+         <p class="featured-details" >hello</p>
+         <span id="18">$18</span>
+         <button type="button" class="addbutton5">+</button>
+         <button type="button" class="wishlist5" >wishlist</button>
+         <button type="button" class="dltbutton5" id="products">-</button>
+            </a>
+
+      </div>
+    </div>
+  </section>
+
+  <form class="you" action="/insert" method="post" name="shopping">
+    <button type="button" class="openBtn" onclick="openCart()">shopping cart</button>
+    <div class="shop">
+<div class="shopping">
+  <ul class="list" id="list">
+    
+  </ul>
+</div>
+<div class="price">
+
+</div>
+<div id="paypal">
+
+</div>
+<p class="total" id="total">0</p>
+<p class="tot">totalPrice R:</p>
+<p  class="prom">products</p>
+<p class="priceName">price(R)</p>
+<button type="button" name="button" onclick="closeCart()" class="closeCart">close cart</button>
+</div>
+  </form>
+
+
+  <button type="button" class="openButon" onclick="openForm()">openForm</button>
+<div class="form" id="form">
+  <p>please subscribe to our store to get updates about your favourite
+      products
+  </p><br>
+  <p class="warning">*NOTE:WHEN YOU SUBMIT THE FORM THE ENTIRE PAGE <br>
+  WILL RELOAD MAKING ALL PREVIOUS ACTIVITY TO BE LOST
+  </p><br>
+  <br>
+  <br>
+<form class="me" action="/insert" method="post">
+  <label for="name">name</label>
+  <input type="text" name="name" ><br>
+  <label>surname</label>
+  <input type="text" name="surname"><br>
+  <label>email address</label>
+  <input type="email" name="email"><br>
+  <button type="submit" name="button">submit</button>
+  <button type="button" class="closeButton" name="button" onclick="closeForm()">close</button>
+</form>
+</div>
+
+
+  <script src="store.js" charset="utf-8"></script>
+  </body>
+</html>

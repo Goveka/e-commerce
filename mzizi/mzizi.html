@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-UA-compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="mzizi.css">
+    <link rel="icon" type="image/jpeg" href="wolf.jpeg">
+    <title>mzizi store</title>
+  </head>
+  <body>
+<header class="hero">
+  <div class="container">
+    <h1 class="primary-text">Amazing books and gadgets at your finger tips</h1>
+    <p>fghghfhfkufrurey</p>
+    <a href="gadgetstore.html" class="btn">see what we have</a>
+  </div>
+</header>
+
+<main>
+  <section class="featured">
+    <div class="container">
+      <h2 class="section-title">featured products</h2>
+      <div class="split">
+        <a href="gadgetstore.html" class="featured-items">
+         <img src="phone1.jpg" class="featured-img">
+         <p class="featured-details">details about will be here</br>
+         click on the image or text</p>
+        </a>
+        <a href="gadgetstore.html" class="featured-items">
+         <img src="phone2.jpg" class="featured-img">
+         <p class="featured-details">details about will be here</br>
+         click on the image or text</p>
+        </a>
+        <a href="gadgetstore.html" class="featured-items">
+         <img src="phone3.jpg" class="featured-img">
+         <p class="featured-details">details about will be here</br>
+         click on the image or text</p>
+        </a>
+        <a href="gadgetstore.html" class="featured-items">
+         <img src="phone4.jpg" class="featured-img">
+         <p class="featured-details">details about will be here</br>
+         click on the image or text</p>
+        </a>
+        <a href="gadgetstore.html" class="featured-items">
+         <img src="phone5.jpg" class="featured-img">
+         <p class="featured-details">details about will be here</br>
+         click on the image or text</p>
+        </a>
+        <a href="gadgetstore.html" class="featured-items">
+         <img src="phone6.jpg" class="featured-img">
+         <p class="featured-details">details about will be here</br>
+         click on the image or text</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="products">
+    <div class="container">
+      <h2 class="section-title">our products</h2>
+
+      <div class="split">
+      <article class="product">
+          <a href="bookstore.html" class="featured-items">
+        <img src="images.jpg" class="product-image">
+      <h3 class="product-title"></h3>
+      <p class="product-discription">details about will be here</br>
+      click on the image or text</p>
+      </a>
+      </article>
+
+
+      <article class="product">
+          <a href="bookstore.html" class="featured-items">
+      <img src="images1.jpg" class="product-image">
+      <h3 class="product-title"></h3>
+      <p class="product-discription">details about will be here</br>
+      click on the image or text></p>
+      </a>
+      </article
+
+
+      <article class="product">
+          <a href="bookstore.html" class="featured-items">
+      <img src="images2.jpg" class="product-image">
+      <h3 class="product-title"></h3>
+      <p class="product-discription">details about will be here</br>
+      click on the image or text</p>
+      </a>
+      </article
+
+
+      <article class="product">
+          <a href="bookstore.html" class="featured-items">
+      <img src="images3.jpg" class="product-image">
+      <h3 class="product-title"></h3>
+      <p class="product-discription">details about will be here</br>
+      click on the image or text</p>
+      </a>
+    </article>
+
+
+    <article class="product">
+        <a href="bookstore.html" class="featured-items">
+    <img src="images4.jpg" class="product-image">
+    <h3 class="product-title"></h3>
+      <p class="product-discription">details about will be here</br>
+      click on the image or text</p>
+      </a>
+      </article
+       </div>
+    </div>
+  </section>
+</main>
+
+<div class="form" id="form">
+<p>please subscribe to our store to get updates about your favourite
+    products
+</p><br>
+<br>
+<br>
+<form class="me" action="/insert" method="post">
+<label for="name">name</label>
+<input type="text" name="name" id="nam"><br>
+<label>surname</label>
+<input type="text" name="surname" id="surnam" ><br>
+<label>email address</label>
+<input type="email" name="email" id="emai"><br>
+<button type="submit" name="button" id="submit">submit</button>
+<button type="button" class="closeButton" name="button" onclick="closeForm()">close</button>
+</form>
+</div>
+
+  </body>
+<script type="text/javascript">
+function closeForm() {
+  const form=document.querySelectorAll(".form")[0];
+  form.style.display='none'
+
+}
+
+  let form= setInterval(function () {
+  let inter=document.querySelectorAll(".form")[0];
+  inter.style.display='block'
+}, 20000);
+</script>
+
+</html>
