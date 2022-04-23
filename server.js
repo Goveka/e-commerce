@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const port=process.ENV || 3001
 //const assert = require('assert');
 
 
@@ -44,6 +45,6 @@ app.use(express.static("mzizi"))
 
 
 
-app.listen(3001, () => {
- console.log('Server is up on port 3000.')
+app.listen(port, () => {
+ console.log('Server is up on port'+ port)
 })
