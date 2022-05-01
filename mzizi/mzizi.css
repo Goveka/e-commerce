@@ -94,6 +94,26 @@ margin-bottom: 3rem;
   color: blue;
 }
 
+.featured-items{
+  height: auto;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+  background-color: #0e387a;
+  overflow: hidden;
+  color: #0e387a;
+}
+
+.featured-details{
+  overflow-wrap: break-word;
+  color: white;
+  font-weight: bolder;
+}
+
+.product-discription{
+  overflow-wrap: break-word;
+  color: white;
+  font-weight: bolder;
+}
+
 @media (prefers-color-scheme:dark) {
 body  {
     background-color: black;

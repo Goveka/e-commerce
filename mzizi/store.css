@@ -68,7 +68,7 @@ margin-bottom: 3rem;
 }
 
 .featuredImg{
-  width: 60%;
+  width: 100%;
   border-radius: 10px;
 }
 .featuredImg:hover{
@@ -106,6 +106,71 @@ button:hover{
   transform: scale(1);
   opacity: .8;
   background-color: #FF8450;
+}
+.addbutton{
+  width: 100%;
+}
+.wishlist{
+  width: 100%;
+}
+.dltbutton{
+  width: 100%;
+}
+
+.addbutton1{
+  width: 100%;
+}
+.wishlist1{
+  width: 100%;
+}
+.dltbutton1{
+  width: 100%;
+}
+
+.addbutton2{
+  width: 100%;
+}
+.wishlist2{
+  width: 100%;
+}
+.dltbutton2{
+  width: 100%;
+}
+
+.addbutton3{
+  width: 100%;
+}
+.wishlist3{
+  width: 100%;
+}
+.dltbutton3{
+  width: 100%;
+}
+
+.addbutton4{
+  width: 100%;
+}
+.wishlist4{
+  width: 100%;
+}
+.dltbutton4{
+  width: 100%;
+}
+
+.addbutton5{
+  width: 100%;
+}
+.wishlist5{
+  width: 100%;
+}
+.dltbutton5{
+  width: 100%;
+}
+
+.featured-details{
+  overflow-wrap: break-word;
+  color: white;
+  font-weight: bolder;
 }
 
 .form{
@@ -188,6 +253,15 @@ button:hover{
 .warning{
   color: red;
 }
+
+.amazing-items{
+  height: auto;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22);
+  background-color: #0e387a;
+  overflow: hidden;
+  color: #0e387a;
+}
+
 @media (prefers-color-scheme:dark) {
 body  {
     background-color: black;
