@@ -1,5 +1,5 @@
-{
-  "books":[
+
+  [
     {
       "id":1,
       "name":"phone1",
@@ -27,35 +27,5 @@
       "price":21,
       "imgName":"images4.jpg"
     }
-  ],
-
-  "gadgets":[
-    {
-      "id":5,
-      "name":"book1",
-      "price":18,
-      "imgName":"phone1.jpg"
-    }
-
-    {
-      "id":6,
-      "name":"book2",
-      "price":19,
-      "imgName":"phone2.jpg"
-    }
-
-    {
-      "id":7,
-      "name":"book3",
-      "price":20,
-      "imgName":"phone3.jpg"
-    }
-
-    {
-      "id":8,
-      "name":"book4",
-      "price":21,
-      "imgName":"phone4.jpg"
-    }
   ]
-}
+
