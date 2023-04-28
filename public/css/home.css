@@ -9,7 +9,7 @@ body{
 }
 
 img{
-  max-width: 100%;
+  max-width: 60%;
   display: block;
 }
 h1,
@@ -18,11 +18,8 @@ h3,
 p{
   margin: 0;
 }
-.container{
-  width: 85%;
-  max-width: 65em;
-  margin: 0 auto;
-}
+
+
 .split{
   display: flex;
   flex-wrap: wrap;
@@ -33,22 +30,20 @@ p{
   display: inline-block;
   text-decoration: none;
   padding: .5em 1.25em;
-  background: var(--clr-accent, blue);
+  background-color: #0bac13e3;
   color:var(--clr-text, #fff);
   font-weight: bolder;
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: 1.0rem;
   border-radius: .25em;
   transition:
    transform 250 ease-in-out,
    opacity 175ms linear;
-   background-color: blue;
 }
 .btn:hover,
 btn:focus{
-  transform: scale(1.1);
   opacity: .9;
-  background-color: orange;
+  background-color: rgb(0, 0, 0);
 }
 .primary-text{
   font-size: 1.5rem;
@@ -59,10 +54,10 @@ btn:focus{
 text-align: center;
 font-size: 2.5rem;
 line-height: 1;
-color: blue;
+color: #000000c0;
 margin-bottom: 3rem;
 }
-.hero{
+header{
   color: white;
   text-align: center;
   padding: 5em 0;
@@ -70,29 +65,17 @@ margin-bottom: 3rem;
  background-image: url("wolf.jpeg");
 
 }
+
 .product{
-  display: flex;
-  flex-wrap: wrap;
-  gap:2em;
-  justify-content: center;
+  word-wrap: break-word;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 40%;
+  margin-bottom: 2%;
+  border: 1px solid #0bac1331 ;
+  border-radius: 3vh;
 }
-.form{
-  display: none;
-  position: absolute;
-  left: 30%;
-  top: 70%;
-  bottom: 0;
-  right: 15px;
-  border-style: solid;
-  height: 50%;
-  max-width: 50%;
-  border-color: #FF8450;
-  background-color: #FF8450;
-  z-index: 9;
-  font-style: italic;
-  font-weight: bolder;
-  color: blue;
-}
+
 
 .featured-items{
   height: auto;
@@ -113,15 +96,25 @@ margin-bottom: 3rem;
   color: white;
   font-weight: bolder;
 }
-
-@media (prefers-color-scheme:dark) {
-body  {
-    background-color: black;
-  }
+footer {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
 }
 
-@media (prefers-color-scheme:white) {
-body  {
-    background-color: pink;
-  }
+
+
+@media only screen and (min-width:50px) and (max-width:480px) {
+  .product{
+    word-wrap: break-word;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 2%;
+    border: 1px solid #0bac1331 ;
+    border-radius: 3vh;
+  } 
 }

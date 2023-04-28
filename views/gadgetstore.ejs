@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/store.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="wolf.jpeg">
+    <title>gadgets</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AX1Z3AJ_r-S_LRoW4sGIqyz0nN18oVtauJ-GpRVgDe3Yq0arMrtQzpuSHyFn7P5XjquRqtJM6NLvaDt-"></script>
+  </head>
+  <body>
+<header >
+  <a href="/shoppingCart" id="cartBtn">
+    <p id="numberOfItemsInCart">0</p>
+    <i class="fas fa-shopping-cart fa-2x">
+    </i>
+    <p>shopping cart</p>
+  </a>
+    <img src="./css/wolf.jpeg" alt="">
+    <h1>Levels</h1>
+    <h2>Accessories</h2>
+    <h3>A perfect place for geeks</h3>
+    <a href="/bookstore" class="btn">go to bookstore <i class="fas fa-book"></i> </a>
+    <a href="/" class="btn">go back home <i class="fas fa-home"></i> </a>
+</header>
+
+
+<main>
+  <section class="amazing">
+    <div class="container">
+      <h2 class="section-title">amazing products</h2>
+      <div class="colomns">
+        <% gadgets.forEach((product)=>{ %>
+          <div id="<%= product._id %>" class="product">
+            <h3><%=product.productName%></h3>
+            <img src="<%= product.productImage %>" alt="">
+            <p>price: <strong><%= product.price %></strong></p>
+            <p>Available stock: <strong class="instock"><%= product.instock%></strong></p>
+            <p><%= product.sumarryDescription %></p>
+            <button class="addToCartBtn">Add to Cart</button>
+          </div>
+            <%})%>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <h2 class="footer">copyright<i class="fas fa-copyright"></i> 2023 - present| Levels| developed by sizwe| Email:sizwenkala80@gmail.com</h2>
+</footer>
+
+  <script src="./javascript/store.js" charset="utf-8"></script>
+  </body>
+</html>

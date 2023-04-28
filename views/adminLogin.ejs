@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levels|| Admin|| Login</title>
+    <link rel="stylesheet" href="./css/adminlogin.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome admin</h1>
+    </header>
+    <main>
+        <div id="form">
+            <p>Please log in with youre valid credentials</p>
+            <h3><%=message %></h3>
+            <form action="/admin-login" method="post">
+                <label for="adminName">Admin name</label>
+                <input type="text" name="adminName" id="adminName" required="true">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required="true">
+                <input type="hidden" name="recovery" readonly="true">
+                <button type="submit">Log in</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

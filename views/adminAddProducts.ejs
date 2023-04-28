@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levels|| add or delete a product</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Add or delete products</h1>
+        <p>In this page you can add or delete individuals product</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="split">
+                <form action="/add-product" method="post">
+                    <div class="product">
+                        <h1>Add products which will be under the catergory "accessories"</h1>
+                        <label for="profilePicInput">upload the image to the cloud datatbase</label>
+                        <input type="file" id="productImageInput" onchange="addProfilePic()"  accept="image/*">
+                        <label for="productImage">Img src</label>
+                        <input type="text" name="productImage" required="true" id="productImage">
+                        <label for="productName">product name</label>
+                        <input type="text" name="productName" required="true" id="productName">
+                        <label for="price"> Price</label>
+                        <input type="text" id="price" name="price" required="true">
+                        <label for="instock">in stock</label>
+                        <input type="number" id="instock" name="instock" required="true">
+                        <label for="catergory">catergory of the product</label>
+                        <input type="text" name="catergory" id="catergory" required="true" value="accessories" readonly="true">
+                        <label for="sumarryDescription"> summary description</label>
+                        <textarea name="sumarryDescription" id="sumarryDescription" cols="30" rows="10" required="true"></textarea>
+                        <label for="fullDescription"> full description</label>
+                        <textarea name="fullDescription" id="fullDescription" cols="30" rows="10" required="true"></textarea>
+                        <button type="submit">Add product</button>
+                    </div>
+                </form>
+                <% gadgets.forEach((product)=>{ %>
+                    <form action="/delete" method="post">
+                        <div class="product">
+                            <h1><%=product.productName %></h1>
+                            <img src="<%=product.productImage %>" alt="">
+                            <input type="text" name="productId" readonly="true" required="true" value="<%=product._id %>" >
+                            <p>R:<%=product.price %></p>
+                            <p>in stock: <%=product.instock %></p>
+                            <p><%= product.sumarryDescription%></p>
+                            <button type="submit">Delete</button>
+                        </div>
+                    </form>
+               <% }) %>
+            </div>
+            <div class="split">
+                <form action="/add-product" method="post">
+                    <div class="product">
+                        <h1>Add products which will be under the catergory "books"</h1>
+                        <label for="profilePicInput">update your profile picture</label>
+                        <input type="file" id="productImageInput" onchange="addProfilePic()"  accept="image/*">
+                        <label for="productImage">Img src</label>
+                        <input type="text" id="productImage" name="productImage" required="true">
+                        <label for="productName">product name</label>
+                        <input type="text" name="productName" required="true" id="productName">
+                        <label for="price"> Price</label>
+                        <input type="text" id="price" name="price" required="true">
+                        <label for="instock">in stock</label>
+                        <input type="number" id="instock" name="instock" required="true">
+                        <label for="catergory">catergory of the product</label>
+                        <input type="text" name="catergory" id="catergory" required="true" value="books" readonly="true">
+                        <label for="sumarryDescription"> summary description</label>
+                        <textarea name="sumarryDescription" id="sumarryDescription" cols="30" rows="10" required="true"></textarea>
+                        <label for="fullDescription"> full description</label>
+                        <textarea name="fullDescription" id="fullDescription" cols="30" rows="10" required="true"></textarea>
+                        <button type="submit">Add product</button>
+                    </div>
+                </form>
+                <% books.forEach((product)=>{ %>
+                    <form action="/delete" method="post">
+                        <div class="product">
+                            <h1><%=product.productName %></h1>
+                            <img src="<%=product.productImage %>" alt="">
+                            <input type="text" name="productId" readonly="true" required="true" value="<%=product._id %>" >
+                            <p>R:<%=product.price %></p>
+                            <p>in stock: <%=product.instock %></p>
+                            <p><%= product.sumarryDescription%></p>
+                            <button type="submit">Delete</button>
+                        </div>
+                    </form>
+               <% }) %>
+            </div>
+        </div>
+    </main>
+    <script>
+                 async function addProfilePic(){
+    const profilePicInput= document.getElementById('productImageInput');
+    const file= profilePicInput.files[0];
+
+    // Create a new form data object
+    const formData = new FormData();
+    formData.append('image', file);
+
+    // Use Axios to upload the image to ImgBB
+    const response = await axios.post('https://api.imgbb.com/1/upload', formData, {
+      headers: {
+        'content-type': 'multipart/form-data'
+      },
+      params: {
+        key: '6ec3827f4865e3031a08d0cabde77286'
+      }
+    });
+
+    // Get the image URL from the ImgBB API response
+    const imgSrcInput= document.getElementById("productImage");
+    const imageUrl = response.data.data.url;
+    imgSrcInput.value=imageUrl;
+    alert('The picture has been added')
+}
+
+    </script>
+</body>
+</html>

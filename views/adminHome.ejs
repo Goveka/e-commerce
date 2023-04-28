@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levels||admin||Home</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Product edit</h1>
+        <p>In this page you can edit the product or delete some products</p>
+        <a href="/add-remove-products"> click here to add produts</a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="split">
+                <% gadgets.forEach((product)=>{ %>
+                    <form action="/update-product" method="post">
+                    <div class="product" id="<%=product._id%>">
+                        <h1><%=product.productName %></h1>
+                        <img src="<%=product.productImage %>" alt="">
+                        <label for="productId">product id</label>
+                        <input type="text" name="productId" readonly="true" required="true" value="<%=product._id%>">
+                        <label for="price" id="priceLabel">Price</label>
+                        <input type="text"  id="price" name="price" id="price" value="<%=product.price %>" required="true">
+                        <label for="stock">Available in stock</label>
+                        <input type="number" id="stock" name="instock" value="<%=product.instock %>" required="true">
+                        <label for="sumarryDescription">summary description</label>
+                        <input type="text" name="sumarryDescription" id="sumarryDescription" required="true" value="<%=product.sumarryDescription%>">
+                        <label for="fullDescription"> full Description</label>
+                        <input type="text" name="fullDescription" required="true" id="fullDescription" value="<%=product.fullDescription%>">
+                        <button type="submit">update product information</button> 
+                    </form>
+                    </div>
+               <% }) %>
+            </div>
+            <div class="split">
+                <% books.forEach((product)=>{ %>
+                    <form action="/update-product" method="post">
+                    <div class="product">
+                        <h1><%=product.productName %></h1>
+                        <img src="<%=product.productImage %>" alt="">
+                            <label for="productId">product id</label>
+                            <input type="text" name="productId" readonly="true" required="true" value="<%=product._id%>">
+                            <label for="price">Price</label>
+                            <input type="text"  id="price" name="price" id="price" value="<%=product.price %>" required="true">
+                            <label for="stock">Available in stock</label>
+                            <input type="number" id="stock" name="instock" value="<%=product.instock %>" required="true">
+                            <label for="sumarryDescription">summary description</label>
+                            <input type="text" name="sumarryDescription" id="sumarryDescription" required="true" value="<%=product.sumarryDescription%>">
+                            <label for="fullDescription"> full Description</label>
+                            <input type="text" name="fullDescription" required="true" id="fullDescription" value="<%=product.fullDescription%>">
+                            <button type="submit">update product information</button>
+                        </form>
+                    </div>
+               <% }) %>
+            </div>
+        </div>  
+    </main>
+</body>
+</html>

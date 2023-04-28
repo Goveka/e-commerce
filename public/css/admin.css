@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #fff;
+}
+
+header{
+    background-color: rgba(12, 158, 25, 0.863);
+    color: #ffffffdc;
+    text-align: center;
+}
+
+main{
+    margin-top: 2%;
+}
+
+.split{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+form{
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid rgba(0, 0, 0, 0.658);
+}
+
+.product > img{
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.product > input{
+    width: 100%;
+    height: 45px;
+    border-top: #fff;
+    border-right: #fff;
+}
+
+.product > label{
+    background-color: rgba(12, 158, 24, 0.404);
+    color: #000000;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.product > button{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.863);
+    color: #fff;
+    border-radius: 4vh;
+    font-weight: bolder;
+    font-size: 1.0rem;
+}
+.product > button:hover{
+    background-color: #000000;
+    color: rgba(12, 158, 25, 0.863);
+}
+.product >h1{
+    width: 100%;
+}
+
+.product > textarea{
+    width: 100%;
+}
+a {
+    color: #2536ce;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+  }
+
+  @media only screen and (min-width:50px) and (max-width:480px) {
+    form{
+        width: 100%;
+    }
+  }
+  @media only screen and (min-width:481px) and (max-width:1118px) {
+    form{
+        width: 80%;
+    }
+  }

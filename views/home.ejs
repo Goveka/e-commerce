@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-UA-compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="wolf.jpeg">
+    <title>Levels||Home</title>
+  </head>
+  <body>
+<header>
+  <div class="container">
+    <h1 class="primary-text">Levels</h1>
+    <p>A perfect place for you</p>
+    <a href="/gadgetstore" class="btn">Accesory store</a>
+    <a href="/bookstore" class="btn">Book store</a>
+  </div>
+</header>
+
+<main>
+  <section class="featured">
+    <div class="container">
+      <h2 class="section-title">Accessories</h2>
+      <div class="split">
+       <% gadgets.forEach((product)=>{ %>
+      <div class="product">
+        <h3><%=product.productName%></h3>
+        <img src="<%= product.productImage %>" alt="">
+        <p>price: <strong><%= product.price %></strong></p>
+        <p>Available stock: <strong><%= product.instock%></strong></p>
+        <p><%= product.sumarryDescription %></p>
+        <a href="/gadgetstore">go to accesory store</a>
+      </div>
+        <%})%>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="products">
+    <div class="container">
+      <h2 class="section-title">Books</h2>
+      <div class="split">
+        <% books.forEach((product)=>{ %>
+          <div class="product">
+            <h3><%=product.productName %></h3>
+            <img src="<%= product.productImage %>" alt="">
+            <p>price: <strong><%= product.price %></strong></p>
+            <p>Available stock: <strong><%= product.instock%></strong></p>
+            <p><%= product.sumarryDescription %></p>
+            <a href="/bookstore"> go to book store</a>
+          </div>
+            <%})%>
+       </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <h2 class="footer">copyright<i class="fas fa-copyright"></i> 2023 - present| Levels| developed by sizwe| Email:sizwenkala80@gmail.com</h2>
+</footer>
+
+</html>
