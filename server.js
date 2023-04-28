@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const url='mongodb://localhost:27017/test'
+//const url='mongodb://localhost:27017/test'
+const url='mongodb+srv://Sizwenkala:sizwe123@cluster0.fejtt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const bodyParser= require('body-parser');
 const port=process.env.PORT || 3001;
 const jwt=require('jsonwebtoken');
