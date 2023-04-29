@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 // models
 const Admin = require('./models/Admin');
-const Product= require('./models/Product');
+const Product= require('./models/product');
 
   // connecting to the database
   mongoose.connect(url,{useNewUrlParser: true,useUnifiedTopology: true})
